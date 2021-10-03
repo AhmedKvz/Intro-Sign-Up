@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,500;0,600;1,500;1,600&display=swap");
+:root {
+  --bg-red: #ff7979;
+  --bg-gradient: rgba(255, 121, 121, 0.9);
+  --primary-violet: #5e54a4;
+  --primary-green: #38cc8b;
+  --hover-green: #77e2b3;
+  --primary-white: #ffffff;
+  --text-focus: #3d3b48;
+  --text-placeholder: #3e3c49b3;
+  --text-footer: #bab7d4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  color: var(--primary-white);
+  background-color: var(--background-red);
+  background: url("../images/bg-intro-desktop.png") var(--bg-gradient);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+/********************************* Article Section *********************************/
+.article-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-right: 2.5%;
+}
+
+article {
+  width: 100%;
+  max-width: 540px;
+  text-align: left;
+}
+
+.article-header {
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 3.438rem;
+  letter-spacing: -0.520833px;
+  font-style: normal;
+  padding-bottom: 1rem;
+}
+
+.article-text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+  width: 100%;
+  max-width: 525px;
+}
+
+/********************************* Form Section *********************************/
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/********************************* Label  *********************************/
+
+.label {
+  font-size: 0.938rem;
+  color: var(--primary-white);
+  letter-spacing: 0.27px;
+  background-color: var(--primary-violet);
+  width: 100%;
+  max-width: 540px;
+  padding: 1.063rem 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  margin-bottom: 5%;
+}
+
+.label span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 116%;
+}
+
+/********************************* Sign Up - form element *********************************/
+
+.signup-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  max-width: 560px;
+  background-color: var(--primary-white);
+  padding: 2.5rem;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+}
+
+.text-field {
+  max-height: 100%;
+  height: 3.5rem;
+  background: #ffffff;
+  border: 1px solid var(--text-focus);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-left: 2rem;
+  width: 100%;
+}
+
+.text-field:focus {
+  border-color: var(--primary-violet);
+  outline: none;
+}
+
+.text-field.error {
+  background: url(/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 95%;
+  border-color: var(--bg-red);
+}
+.text-field.error::placeholder {
+  color: #FF7979;
+}
+
+.placeholder-color {
+  color: #FF7979;
+}
+
+
+.text-field:focus,
+input:focus {
+  color: var(--text-focus);
+}
+
+input,
+select,
+.text-field {
+  font-weight: 600;
+  color: var(--text-focus);
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.25px;
+  caret-color: var(--primary-violet);
+}
+
+.signup-info .input-container:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.text-field.error-email::placeholder {
+  color: var(--bg-red);
+  opacity: 1;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+::placeholder {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.25px;
+  color: var(--text-focus);
+  opacity: 0.75;
+}
+
+.error-message {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 0.688rem;
+  line-height: 16px;
+  color: var(--bg-red);
+}
+
+.btn {
+  border: none;
+  background-color: var(--primary-green);
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  border-radius: 5px;
+  height: 3.5rem;
+  font-size: 0.938rem;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: var(--primary-white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:focus {
+  border: none;
+  outline: none;
+}
+
+.terms {
+  font-weight: 700;
+  font-size: 0.688rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: var(--text-footer);
+  letter-spacing: 0.1px;
+}
+
+.terms span {
+  font-weight: 500;
+  color: var(--bg-red);
+}
+
+/********************************* Media Query *********************************/
+
+
+/******************************** Mobile 414  ********************************/ 
+@media only screen and (max-width: 414px) {
+  body {
+    background: url("../images/bg-intro-mobile.png") var(--bg-gradient);
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "article"
+      "form";
+
+    width: 90%;
+    overflow: scroll;
+  }
+
+  .article-section {
+    grid-area: article;
+    padding-top: 20%;
+  }
+
+  article {
+    text-align: center;
+  }
+
+  .article-header {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .article-text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  .label {
+    text-align: center;
+  }
+
+  .label p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    width: 100%;
+    max-width: 194px;
+  }
+
+  .form-section {
+    grid-area: form;
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
+  .term {
+    font-weight: 500;
+    font-size: 0.6rem;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+@media only screen and (max-width: 320px) {
+  .container {
+    width: 90%;
+  }
+}
+
+
+/******************************** Landscape 667 ********************************/ 
+@media only screen and (max-width: 667px) and (orientation: landscape) {
+  body {
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "article"
+      "form";
+
+    width: 90%;
+    overflow: scroll;
+  }
+
+  .article-section {
+    grid-area: article;
+    padding-top: 20%;
+  }
+
+  article {
+    text-align: center;
+  }
+
+  .article-header {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .article-text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  .label {
+    text-align: center;
+  }
+
+  .label p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    width: 100%;
+    max-width: 194px;
+  }
+
+  .form-section {
+    grid-area: form;
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
+  .term {
+    font-weight: 500;
+    font-size: 0.6rem;
+  }
+}
+
+/******************************** Landscape 736px ********************************/ 
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  body {
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "article"
+      "form";
+
+    width: 90%;
+    overflow: scroll;
+  }
+
+  .article-section {
+    grid-area: article;
+    padding-top: 20%;
+  }
+
+  article {
+    text-align: center;
+  }
+
+  .article-header {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .article-text {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  .label {
+    text-align: center;
+  }
+
+  .label p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    width: 100%;
+    max-width: 194px;
+  }
+
+  .form-section {
+    grid-area: form;
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
+  .term {
+    font-weight: 500;
+    font-size: 0.6rem;
+  }
+}
