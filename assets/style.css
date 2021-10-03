@@ -142,8 +142,13 @@ article {
   border-color: var(--bg-red);
 }
 .text-field.error::placeholder {
-  color: transparent;
+  color: #FF7979;
 }
+
+.placeholder-color {
+  color: #FF7979;
+}
+
 
 .text-field:focus,
 input:focus {
@@ -285,6 +290,10 @@ select,
     font-weight: 500;
     font-size: 0.6rem;
   }
+}
+
+.d-none {
+  display: none;
 }
 
 @media only screen and (max-width: 320px) {

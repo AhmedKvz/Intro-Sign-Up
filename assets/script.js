@@ -10,12 +10,13 @@ function submitForm() {
     if (textFields[i].value == "") {
       errorMessages[i].classList.remove("hidden");
       textFields[i].classList.add("error");
+      textFields[2].setAttribute('placeholder', 'email@example/com');
       errorMessages[i].innerText = `${textFields[i].dataset.name} cannot be empty.`;
     } else if (textFields[i].dataset.name == "Email" && !emailRegex.test(textFields[i].value)) {
       errorMessages[i].classList.remove("hidden");
       textFields[i].classList.add("error-email");
       textFields[i].value = "";
-      textFields[i].placeholder = "email@example/com";
+      textFields[i].placeholder = "";
       errorMessages[i].innerText = "Looks like this is not an email!";
     } else {
       errorMessages[i].classList.add("hidden");
